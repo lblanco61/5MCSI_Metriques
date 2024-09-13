@@ -7,6 +7,11 @@ import sqlite3
                                                                                                                                        
 app = Flask(__name__)                                                                                                                  
                                                                                                                                        
+
+@app.route('/')
+def hello_world():
+    return render_template('hello.html') #Comm2
+
 @app.route("/contact/")
 def MaPremiereAPI():
   return render_template("contact.html")
